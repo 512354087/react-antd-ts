@@ -1,4 +1,4 @@
-'use strict';
+
 
 const fs = require('fs');
 const path = require('path');
@@ -69,7 +69,7 @@ function getWebpackAliases(options = {}) {
   }
 
   const baseUrlResolved = path.resolve(paths.appPath, baseUrl);
-
+  // 返回相对路径
   if (path.relative(paths.appPath, baseUrlResolved) === '') {
     return {
       src: paths.appSrc,
